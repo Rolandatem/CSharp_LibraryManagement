@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  Solution_Name: LibraryManagement.sln
+  Test_Project_Path: LibraryManagement.Tests/LibraryManagement.Tests.csproj
+
 jobs:
   build:
     runs-on: windows-latest
@@ -23,7 +27,7 @@ jobs:
       run: dotnet restore
 
     - name: Execute unit tests
-      run: dotnet test
+      run: dotnet test ${{ env.Test_Project_Path }} --no-build --verbosity normal
 
     - name: Build Solution
-      run: dotnet build $
+      run: dotnet build ${{ env.Solution_Name }} --no-restore

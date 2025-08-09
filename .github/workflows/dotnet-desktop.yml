@@ -26,8 +26,8 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
 
-    - name: Execute unit tests
-      run: dotnet test ${{ env.Test_Project_Path }} --no-build --verbosity normal
-
     - name: Build Solution
       run: dotnet build ${{ env.Solution_Name }} --no-restore
+
+    - name: Execute unit tests
+      run: dotnet test ${{ env.Test_Project_Path }} --no-build --verbosity normal

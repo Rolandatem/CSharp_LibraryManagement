@@ -31,9 +31,24 @@ functions that were well-defined and validated through testing before implementa
 	  execution.
 	- **Parameterized Tests**: Utilized `[InlineData]` and `[ClassData]` attributes to run tests with
 	  varying inputs, enhancing test coverage by iterating over multiple datasets seamlessly.
+- **Code Coverage Analysis with Coverlet**:
+	- Integrated `coverlet` as part of the testing process to measure code coverage. Both the MSBuild and collector-based
+	  approaches are used to gather detailed insights into t est effectiveness and application code coverage.
 - **In-Memory Database for Testing**:
 	- Used Entity Framwork Core's in-memory database feature to simulate database interactions, ensuring
 	  isolated and repeatable test environments without affecting a real database.
+
+## Continuous Integration (CI) with GitHub Actions
+This project employs a GitHub Actions workflow to ensure continuous integration, automatically building and testing
+the proiject with each push or pull request to the `main` branch.
+
+### GitHub Actions Workflow
+The current workflow is details as follows:
+- **Environment Setup**: Utilizes the latest version of Windows runners with .NET Core tools.
+- **Dependency Management**: Restores all project dependencies.
+- **Build Process**: Builds the entire solution to verify code correctness.
+- **Testing**: Executes unit tests, collecting code coverage data usnig `XPlat Code Coverage`.
+- **Artifacts Management**: Uploads code coverage reports for review.
 
 ## Tool and Technologies
 - **.NET 9**: The projects included were built using .NET 9, taking advantage of modern features.

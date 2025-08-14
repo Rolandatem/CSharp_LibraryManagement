@@ -1,17 +1,24 @@
-﻿namespace LibraryManagementApp.Models;
+﻿namespace LibraryManagement.Data.Models;
 
 /// <summary>
 /// The <c>Book</c> class represents a book in the Library Management System.
 /// </summary>
 public class Book
 {
-	#region "Constructor"
+	#region "Constructors"
+	/// <summary>
+	/// Initializes an empty instance of the <see cref="Book"/> class.
+	/// </summary>
+	public Book() { }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Book"/> class.
 	/// </summary>
 	/// <param name="title">The title of the book.</param>
 	/// <param name="author">The author of the book.</param>
-	public Book(string title, string author)
+	public Book(
+		string title,
+		string author)
 	{
 		this.Title = title;
 		this.Author = author;
@@ -20,13 +27,18 @@ public class Book
 
 	#region "Public Properties"
 	/// <summary>
-	/// Gets the title of the book.
+	/// DB ID of the book.
 	/// </summary>
-	public string Title { get; }
+	public int Id { get; set; }
 
 	/// <summary>
-	/// Gets the author of the book.
+	/// Gets or sets the title of the book.
 	/// </summary>
-	public string Author { get; }
+	public string Title { get; set; } = String.Empty;
+
+	/// <summary>
+	/// Gets or sets the author of the book.
+	/// </summary>
+	public string Author { get; set; } = String.Empty;
 	#endregion
 }

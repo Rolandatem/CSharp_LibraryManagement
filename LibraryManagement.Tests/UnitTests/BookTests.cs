@@ -1,4 +1,4 @@
-﻿using LibraryManagementApp.Models;
+﻿using LibraryManagement.Data.Models;
 
 namespace LibraryManagement.Tests.UnitTests;
 

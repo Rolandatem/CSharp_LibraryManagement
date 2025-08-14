@@ -1,8 +1,11 @@
-﻿namespace LibraryManagement.Data.Models;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace LibraryManagement.Data.Models;
 
 /// <summary>
 /// The <c>Book</c> class represents a book in the Library Management System.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public class Book
 {
 	#region "Constructors"

@@ -4,6 +4,7 @@ using LibraryManagementApp.Interfaces;
 using LibraryManagementApp.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 #region "Application Initialization"
 //--Configure DI
@@ -28,6 +29,7 @@ Console.WriteLine("Library Management System Initialized.");
 await MainMenuAsync();
 #endregion
 
+[ExcludeFromCodeCoverage]
 async Task MainMenuAsync()
 {
     bool optionError = false;
@@ -86,6 +88,7 @@ async Task MainMenuAsync()
     }
 }
 
+[ExcludeFromCodeCoverage]
 async Task DoAddBookAsync()
 {
     string? title = null;
@@ -142,6 +145,7 @@ async Task DoAddBookAsync()
     Console.ReadLine();
 }
 
+[ExcludeFromCodeCoverage]
 async Task DoRemoveBookAsync()
 {
     Console.Clear();
@@ -177,6 +181,7 @@ async Task DoRemoveBookAsync()
     Console.ReadLine();
 }
 
+[ExcludeFromCodeCoverage]
 async Task DoListAllBooksAsync()
 {
     Console.Clear();
@@ -218,6 +223,7 @@ async Task DoListAllBooksAsync()
     Console.ReadLine();
 }
 
+[ExcludeFromCodeCoverage]
 async Task DoSearchBookByTitleAsync()
 {
     string? title = null;

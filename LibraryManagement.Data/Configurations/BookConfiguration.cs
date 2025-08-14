@@ -1,9 +1,11 @@
 ﻿using LibraryManagement.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Diagnostics.CodeAnalysis;
 
 namespace LibraryManagement.Data.Configurations;
 
+[ExcludeFromCodeCoverage]
 public class BookConfiguration : IEntityTypeConfiguration<Book>
 {
     public void Configure(EntityTypeBuilder<Book> builder)

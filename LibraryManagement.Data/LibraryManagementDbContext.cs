@@ -1,9 +1,11 @@
 ﻿using LibraryManagement.Data.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace LibraryManagement.Data;
 
+[ExcludeFromCodeCoverage]
 public class LibraryManagementDbContext : DbContext
 {
 	#region "Tables"
